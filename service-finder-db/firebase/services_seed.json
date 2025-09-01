@@ -1,0 +1,307 @@
+[
+  {
+    "id": "khayelitsha-day-hospital",
+    "name": "Khayelitsha Day Hospital",
+    "type": "clinic",
+    "address": {
+      "line1": "Khuza Rd",
+      "city": "Cape Town",
+      "postalCode": "7784",
+      "country": "ZA"
+    },
+    "location": {
+      "lat": -34.0396,
+      "lng": 18.673
+    },
+    "hours": {
+      "mon": [
+        {
+          "open": "08:00",
+          "close": "16:00"
+        }
+      ],
+      "tue": [
+        {
+          "open": "08:00",
+          "close": "16:00"
+        }
+      ],
+      "wed": [
+        {
+          "open": "08:00",
+          "close": "16:00"
+        }
+      ],
+      "thu": [
+        {
+          "open": "08:00",
+          "close": "16:00"
+        }
+      ],
+      "fri": [
+        {
+          "open": "08:00",
+          "close": "16:00"
+        }
+      ],
+      "sat": [],
+      "sun": []
+    },
+    "description": "Primary care services. Bring ID/clinic card.",
+    "contact": {
+      "phone": "021 360 5200",
+      "email": "",
+      "website": ""
+    },
+    "status": "active",
+    "lastUpdated": "2025-08-01T00:00:00Z"
+  },
+  {
+    "id": "bellville-library",
+    "name": "Bellville Public Library",
+    "type": "library",
+    "address": {
+      "line1": "Carl van Aswegen St",
+      "city": "Cape Town",
+      "postalCode": "7530",
+      "country": "ZA"
+    },
+    "location": {
+      "lat": -33.9024,
+      "lng": 18.6317
+    },
+    "hours": {
+      "mon": [
+        {
+          "open": "09:00",
+          "close": "17:00"
+        }
+      ],
+      "tue": [
+        {
+          "open": "09:00",
+          "close": "19:00"
+        }
+      ],
+      "wed": [
+        {
+          "open": "09:00",
+          "close": "17:00"
+        }
+      ],
+      "thu": [
+        {
+          "open": "09:00",
+          "close": "19:00"
+        }
+      ],
+      "fri": [
+        {
+          "open": "09:00",
+          "close": "17:00"
+        }
+      ],
+      "sat": [
+        {
+          "open": "09:00",
+          "close": "12:00"
+        }
+      ],
+      "sun": []
+    },
+    "description": "Books, study space, internet access.",
+    "contact": {
+      "phone": "021 444 7830",
+      "email": "",
+      "website": ""
+    },
+    "status": "active",
+    "lastUpdated": "2025-08-01T00:00:00Z"
+  },
+  {
+    "id": "haven-night-shelter-woodstock",
+    "name": "The Haven Night Shelter (Woodstock)",
+    "type": "shelter",
+    "address": {
+      "line1": "20 Selkirk St, Woodstock",
+      "city": "Cape Town",
+      "postalCode": "7925",
+      "country": "ZA"
+    },
+    "location": {
+      "lat": -33.9292,
+      "lng": 18.4484
+    },
+    "hours": {
+      "mon": [
+        {
+          "open": "00:00",
+          "close": "23:59"
+        }
+      ],
+      "tue": [
+        {
+          "open": "00:00",
+          "close": "23:59"
+        }
+      ],
+      "wed": [
+        {
+          "open": "00:00",
+          "close": "23:59"
+        }
+      ],
+      "thu": [
+        {
+          "open": "00:00",
+          "close": "23:59"
+        }
+      ],
+      "fri": [
+        {
+          "open": "00:00",
+          "close": "23:59"
+        }
+      ],
+      "sat": [
+        {
+          "open": "00:00",
+          "close": "23:59"
+        }
+      ],
+      "sun": [
+        {
+          "open": "00:00",
+          "close": "23:59"
+        }
+      ]
+    },
+    "description": "Shelter and support services.",
+    "contact": {
+      "phone": "021 448 1124",
+      "email": "",
+      "website": ""
+    },
+    "status": "active",
+    "lastUpdated": "2025-08-01T00:00:00Z"
+  },
+  {
+    "id": "mitchells-plain-community-health-centre",
+    "name": "Mitchells Plain Community Health Centre",
+    "type": "clinic",
+    "address": {
+      "line1": "Eisleben Rd",
+      "city": "Cape Town",
+      "postalCode": "7785",
+      "country": "ZA"
+    },
+    "location": {
+      "lat": -34.039,
+      "lng": 18.5826
+    },
+    "hours": {
+      "mon": [
+        {
+          "open": "07:30",
+          "close": "16:00"
+        }
+      ],
+      "tue": [
+        {
+          "open": "07:30",
+          "close": "16:00"
+        }
+      ],
+      "wed": [
+        {
+          "open": "07:30",
+          "close": "16:00"
+        }
+      ],
+      "thu": [
+        {
+          "open": "07:30",
+          "close": "16:00"
+        }
+      ],
+      "fri": [
+        {
+          "open": "07:30",
+          "close": "16:00"
+        }
+      ],
+      "sat": [],
+      "sun": []
+    },
+    "description": "Community health services with triage.",
+    "contact": {
+      "phone": "021 391 3000",
+      "email": "",
+      "website": ""
+    },
+    "status": "active",
+    "lastUpdated": "2025-08-01T00:00:00Z"
+  },
+  {
+    "id": "cape-town-central-library",
+    "name": "Cape Town Central Library",
+    "type": "library",
+    "address": {
+      "line1": "Drill Hall, Darling St",
+      "city": "Cape Town",
+      "postalCode": "8000",
+      "country": "ZA"
+    },
+    "location": {
+      "lat": -33.9253,
+      "lng": 18.4239
+    },
+    "hours": {
+      "mon": [
+        {
+          "open": "09:00",
+          "close": "18:00"
+        }
+      ],
+      "tue": [
+        {
+          "open": "09:00",
+          "close": "18:00"
+        }
+      ],
+      "wed": [
+        {
+          "open": "09:00",
+          "close": "18:00"
+        }
+      ],
+      "thu": [
+        {
+          "open": "09:00",
+          "close": "18:00"
+        }
+      ],
+      "fri": [
+        {
+          "open": "09:00",
+          "close": "17:00"
+        }
+      ],
+      "sat": [
+        {
+          "open": "09:00",
+          "close": "13:00"
+        }
+      ],
+      "sun": []
+    },
+    "description": "Central public library; large collection, events.",
+    "contact": {
+      "phone": "021 444 0980",
+      "email": "",
+      "website": ""
+    },
+    "status": "active",
+    "lastUpdated": "2025-08-01T00:00:00Z"
+  }
+]

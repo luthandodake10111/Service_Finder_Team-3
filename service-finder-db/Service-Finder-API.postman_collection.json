@@ -1,0 +1,37 @@
+{
+  "info": {
+    "name": "Service Finder API (Emulator)",
+    "_postman_id": "af7a8d0d-4d49-47d0-9d73-emu-db-kit",
+    "description": "GET service details by ID for React Info Window",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Service by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5050/api/service/{{serviceId}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5050",
+          "path": [
+            "api",
+            "service",
+            "{{serviceId}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "serviceId",
+      "value": "khayelitsha-day-hospital"
+    }
+  ]
+}
