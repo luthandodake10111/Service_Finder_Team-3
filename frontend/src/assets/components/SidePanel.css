@@ -1,0 +1,526 @@
+/* src/components/SidePanel.css */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}   
+
+/* Hover Preview Styles */
+.preview-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-preview {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 12px;
+  min-width: 280px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-10px);
+}
+
+.hover-preview.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.preview-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.preview-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+
+.preview-info h3 {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.preview-info .category {
+  margin: 0;
+  color: #666;
+  font-size: 12px;
+}
+
+.preview-details {
+  margin-bottom: 12px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 10px;
+}
+
+.detail-item svg {
+  margin-right: 8px;
+  color: #444;
+}
+
+.preview-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn.small {
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  border: 1px solid #4CAF50;
+  background-color: transparent;
+  color: #4CAF50;
+}
+
+.action-btn.small:hover {
+  background-color: #e8f5e8;
+}
+
+.action-btn.small.secondary {
+  border-color: #2196F3;
+  color: #2196F3;
+}
+
+.action-btn.small.secondary:hover {
+  background-color: #e3f2fd;
+}
+
+
+
+.side-panel-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: flex-end; /* Align panel to the right */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+.side-panel {
+  width: 300px;
+  max-height: 100vh;           /* So it doesn't go off screen */
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;           /* Enable scrolling inside panel if content is long */
+  font-family: 'Roboto', sans-serif;
+
+  /* 🔥 Sticky/Fixed Positioning */
+  position: fixed;
+  top: 0px;                  /* Distance from top of viewport */
+  left: 5px;                /* Distance from right edge */
+  z-index: 1000;              /* Make sure it appears above other content */
+}
+
+.close-btn {
+  margin-left: 250px;
+
+}
+
+/* Optional: Add a little scroll smoothness */
+.side-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.side-panel::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.side-panel::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+.panel-header {
+  padding: 16px;
+  text-align: center;
+}
+
+.panel-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.panel-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 8px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.stars {
+  color: #fbb000;
+  font-size: 16px;
+}
+
+.review-count {
+  font-size: 14px;
+  color: #555;
+}
+
+.category {
+  font-size: 14px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 14px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  color: #555;
+  transition: all 0.2s;
+}
+
+.tab.active {
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 50px;
+  background: white;
+  color: #555;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background: #f5f5f5;
+}
+
+.action-btn.primary {
+  border-color: #00796b;
+  color: #00796b;
+}
+
+.action-btn.secondary {
+  border-color: #b0d7e4;
+  color: #00796b;
+}
+
+.info-section {
+  padding: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #333;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.open-status {
+  color: #00796b;
+  font-weight: 500;
+}
+
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .side-panel-backdrop {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .side-panel.mobile {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    max-height: 90vh;
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    color: #555;
+  }
+  
+  .hover-preview {
+    display: none;
+  }
+  
+  .panel-header {
+    padding-top: 40px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .info-item {
+    flex-wrap: wrap;
+  }
+}
+
+/* Optional: Add a little scroll smoothness */
+.side-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.side-panel::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.side-panel::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+.panel-header {
+  padding: 16px;
+  text-align: center;
+}
+
+.panel-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.panel-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 8px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.stars {
+  color: #fbb000;
+  font-size: 16px;
+}
+
+.review-count {
+  font-size: 14px;
+  color: #555;
+}
+
+.category {
+  font-size: 14px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 14px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  color: #555;
+  transition: all 0.2s;
+}
+
+.tab.active {
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 50px;
+  background: white;
+  color: #555;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background: #f5f5f5;
+}
+
+.action-btn.primary {
+  border-color: #00796b;
+  color: #00796b;
+}
+
+.action-btn.secondary {
+  border-color: #b0d7e4;
+  color: #00796b;
+}
+
+.info-section {
+  padding: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #333;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.open-status {
+  color: #00796b;
+  font-weight: 500;
+}
+
+/* Add to your existing SidePanel.css */
+.loading {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.error {
+  padding: 2rem;
+  text-align: center;
+  color: #d32f2f;
+  background-color: #ffebee;
+  border-radius: 8px;
+  margin: 1rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+  color: #555;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.close-btn:hover {
+  background-color: #f5f5f5;
+}
